@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/animinder/static/css/main.f0c55a98.css",
-    "main.js": "/animinder/static/js/main.b06636cd.js",
+    "main.css": "/animinder/static/css/main.b4d436c4.css",
+    "main.js": "/animinder/static/js/main.86334c42.js",
     "static/media/flayn_logo.png": "/animinder/static/media/flayn_logo.ab91f4ae78a32e3cad33.png",
     "index.html": "/animinder/index.html",
-    "main.f0c55a98.css.map": "/animinder/static/css/main.f0c55a98.css.map",
-    "main.b06636cd.js.map": "/animinder/static/js/main.b06636cd.js.map"
+    "main.b4d436c4.css.map": "/animinder/static/css/main.b4d436c4.css.map",
+    "main.86334c42.js.map": "/animinder/static/js/main.86334c42.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0c55a98.css",
-    "static/js/main.b06636cd.js"
+    "static/css/main.b4d436c4.css",
+    "static/js/main.86334c42.js"
   ]
 }
