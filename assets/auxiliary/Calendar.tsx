@@ -1,3 +1,8 @@
+// Calendar section. This is the second page of the website. It is currently
+// unused, but it is a good example of how to use the Navbar and Title components.
+// This is a next step for the website.
+
+/*
 import Navbar from "../components/Navbar";
 import { useEffect, useState } from 'react';
 import { UserData } from '../interfaces/MultifactedUser';
@@ -23,3 +28,4 @@ function Calendar() {
   }
   
 export default Calendar;
+*/

@@ -26,7 +26,6 @@ export function GalleryHome() {
             className="gallery-button"
             aria-label="press to search for user gallery"
             onClick={() => {navigate('/gallery/' + queriedID)}}> Send me to the site</button>
-            {/* <Link to={"/gallery/" + uid}>Topics</Link> */}
         </div>
     );
   }
