@@ -4,7 +4,7 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 import './styles/index.css';
 
 import App from './App';
-import AuthRoute from './components/AuthRoute';
+import AuthRoute from './firebase/AuthRoute';
 import Login from './pages/Login';
 import {IndividualGallery, GalleryHome} from './pages/Gallery';
 import FriendsPage from './pages/FriendsPage';

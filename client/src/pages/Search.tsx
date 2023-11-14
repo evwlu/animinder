@@ -78,7 +78,6 @@ interface ControlledImageProps{
   link: string
   altText: string
   malLink:string
-
 }
 
 /**
