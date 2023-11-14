@@ -1,6 +1,9 @@
+// Deprecrated implementation utilizing Google OAuth. We instead use Firebase Auth.
+
+/*
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import { getAuth } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
 // Firebase v9 requires us to import as firebase/compat/..., though in other documentation
 // you might just see something like import firebase/app
 
@@ -19,6 +22,36 @@ const firebaseConfig = {
 
 const app = firebase.initializeApp(firebaseConfig)
 
+// Delete the following later. This is exclusively used in Scratch-Work.
+const provider = new GoogleAuthProvider()
+export const signInWithGoogle = () => {
+  signInWithPopup(auth, provider).then((result) => {
+    const name = result.user.displayName as string
+    const email = result.user.email as string
+    const profPic = result.user.photoURL as string
+    const uuid = result.user.uid
+
+    localStorage.setItem('name', name)
+    localStorage.setItem('email', email)
+    localStorage.setItem('profPic', profPic)
+    localStorage.setItem('uuid', uuid)
+
+    window.location.reload();
+  }).catch((e) => console.log(e))
+}
+
+export const signOutWithGoogle = () => {
+  localStorage.removeItem('name')
+  localStorage.removeItem('email')
+  localStorage.removeItem('profPic')
+  localStorage.removeItem('uuid')
+  signOut(auth);
+  window.location.reload();
+}
+// Delete the above later.
+
+
 // For other files that will use firebase, place a "import firebase from './Firebase'" up top;
 export const auth = getAuth(app)
 export default firebase
+*/

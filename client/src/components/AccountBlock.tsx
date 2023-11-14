@@ -1,5 +1,3 @@
-import React from 'react'
-
 function AccountBlock({dev} : any) {
     return (
         <div key={dev}>

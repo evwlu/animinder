@@ -1,7 +1,10 @@
+// Deprecated. This file is for testing purposes only.
+
+/*
 import { useState, useEffect } from 'react';
 import firebase, { signInWithGoogle, signOutWithGoogle } from '../firebase/Firebase';
 import AccountBlock from '../components/AccountBlock';
-import AccountCreator from '../components/AccountCreator';
+// import AccountCreator from '../components/AccountCreator';
 import Home from './Home'
 import Navbar from '../components/Navbar';
 import Title from '../components/Title'
@@ -66,15 +69,10 @@ function ScratchWork() {
         <Title />
         <Navbar></Navbar>
       Title Goes Here
-
-      {/* We only display the information once it has been loaded. We also
-      use map to list out all documents in the collection */}
       {loaded === true && data.map((dev) => (
           <AccountBlock dev={dev} key={dev.id}/>
         ))
       }
-
-      <AccountCreator></AccountCreator>
 
       <button onClick={signInWithGoogle}> Sign In With Google Experimentation</button>
       <h1> {localStorage.getItem('name')} </h1>
@@ -89,3 +87,4 @@ function ScratchWork() {
 
 export {ref};
 export default ScratchWork
+*/

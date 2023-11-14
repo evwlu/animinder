@@ -1,16 +1,10 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
 import SearchPage from './pages/Search';
-import {
-  createBrowserRouter,
-  RouterProvider
-} from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import './styles/index.css';
 
 import App from './App';
-import Second from './pages/Calendar';
-import ScratchWork from './pages/ScratchWork';
-import AuthRoute from './components/AuthRoute';
+import AuthRoute from './firebase/AuthRoute';
 import Login from './pages/Login';
 import {IndividualGallery, GalleryHome} from './pages/Gallery';
 import FriendsPage from './pages/FriendsPage';
@@ -19,7 +13,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "login",
     element: <Login/>
@@ -31,14 +25,6 @@ const router = createBrowserRouter([
   {
     path: "search",
     element: <AuthRoute page={<SearchPage/>}/>
-  },
-  {
-    path: "second-page",
-    element: <AuthRoute page={<Second/>}/>
-  },
-  {
-    path: "scratch-work",
-    element: <AuthRoute page={<ScratchWork/>}/>
   },
   {
     path: "gallery",

@@ -73,7 +73,6 @@ function Recommendations(userObject : any) {
                     return true
                 }
             })
-            // console.log(uniqueRecommendations)
             // Comparator for ranking. As a reminder, b - a implies b > a.
             const mu = 20000 // average ratings required
             const sigmoid = (ratings : number) => {return 1/(1+Math.exp(-(ratings-mu)/5000))}
@@ -84,7 +83,6 @@ function Recommendations(userObject : any) {
                 return bVal - aVal
             }
             const orderedRecommendations = uniqueRecommendations.sort(rankingComparator)
-            // console.log(orderedRecommendations)
 
             const reccDiv = []
             for (let i = 0; i < orderedRecommendations.length; i++) {
@@ -107,7 +105,6 @@ function Recommendations(userObject : any) {
         })
     }
     
-    console.log('recc catch!')
     return (
         <div 
             className='recommended'

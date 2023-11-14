@@ -55,7 +55,7 @@ function Home() {
     const [fbUser, setFBUser] = useState<UserData>()
     useEffect(() => {authRefHelper(setGoogleUser, setFBUser)}, [])
     useEffect(() => {getIncomingFriends(); returnListByID(fbUser?.id ?? 'x', setList)}, [fbUser])
-    var devRef = firebase.firestore().collection("user_accounts")
+    const devRef = firebase.firestore().collection("user_accounts")
 
 
     interface EditBoxProps {

@@ -1,12 +1,11 @@
 import firebase from '../firebase/Firebase';
-import React, { useState, Dispatch, SetStateAction, useEffect } from 'react';
+import { useState, Dispatch, SetStateAction, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { AnimeData } from '../interfaces/MultifacetedAnime';
 import { UserData } from '../interfaces/MultifactedUser';
 import authRefHelper from '../firebase/AuthRefHelper';
 import '../styles/searchStyles.css'
 import Title from '../components/Title'
-import link, { Link } from 'react-router-dom'
 
 
 /**
@@ -79,7 +78,6 @@ interface ControlledImageProps{
   link: string
   altText: string
   malLink:string
-
 }
 
 /**
@@ -144,8 +142,6 @@ function CreateSearchResults(data:any[], setItems : (itemList : any[]) => any, a
         onClick={() => {
           if (data[i] !== undefined) {
             const ref = data[i]
-            console.log(ref)
-            console.log(ref.images.jpg.image_url)
             try {
               const animeBlock : AnimeData = {
                 mal_id: parseInt(ref.mal_id),
@@ -161,13 +157,13 @@ function CreateSearchResults(data:any[], setItems : (itemList : any[]) => any, a
                 broadcast_time : ref.broadcast.time,
               }
               addToAcc(animeBlock)
-            } catch (e) {
-              console.log(e)
-            } 
+            } catch (error) {
+              console.log(error)
+            }
           }
         }}
       
-        >add to watchlist</button>
+        >Add to Watchlist</button>
 
       </div>
     );
